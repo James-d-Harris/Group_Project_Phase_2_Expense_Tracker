@@ -1,0 +1,308 @@
+body {
+    display: flex;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    color: #fff;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 10vw;
+    background-color: #555;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2vh 0;
+}
+
+.profile-picture {
+    width: 7vw;
+    height: 7vw;
+    background-color: #777;
+    border-radius: 50%;
+    margin-bottom: 2vh;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-item {
+    padding: 1vh 0;
+    cursor: pointer;
+}
+
+.main-content {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 2vh;
+    padding: 2vh;
+    overflow: auto;
+}
+
+.recent-expenses,
+.monthly-report {
+    background-color: #444;
+    padding: 2vh;
+    border-radius: 1vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.recent-expenses {
+    height: 45vh;
+}
+
+.monthly-report {
+    height: 40vh;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 0.5vh 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 1vh;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.table-wrapper {
+    max-height: 37vh;
+    overflow-y: auto;
+}
+
+thead th {
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    z-index: 1;
+}
+
+.charts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%; 
+}
+
+.chart-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+}
+
+canvas {
+    width: 100%;
+    height: 100%;
+}
+
+.category-badge {
+    display: inline-block;
+    border-radius: 1vh;
+    padding: 0.5vh 1vw;
+    color: #000;
+    text-align: center;
+    font-weight: bold;
+}
+
+.amount-positive {
+    color: #00FF00;
+}
+
+.amount-negative {
+    color: #FF0000;
+}
+
+.expense-form {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1vh;
+    margin-bottom: 2vh;
+}
+
+.expense-form input,
+.expense-form button {
+    padding: 1vh;
+    border: 1px solid #555;
+    border-radius: 0.5vh;
+    background-color: #666;
+    color: #fff;
+}
+
+.expense-form button {
+    cursor: pointer;
+}
+
+.expense-form button:hover {
+    background-color: #777;
+}
+
+.edit-expense-input {
+    width: 100%;
+    padding: 0.5vh;
+    border: 1px solid #555;
+    border-radius: 0.5vh;
+    background-color: #666;
+    color: #fff;
+}
+
+.edit-expense-button {
+    padding: 0.5vh 1vh;
+    border: 1px solid #555;
+    border-radius: 0.5vh;
+    background-color: #666;
+    color: #fff;
+    cursor: pointer;
+}
+
+.edit-expense-button:hover {
+    background-color: #777;
+}
+
+.delete-expense-button {
+    padding: 0.5vh 1vh;
+    border: 1px solid #555;
+    border-radius: 0.5vh;
+    background-color: #666;
+    color: #fff;
+    cursor: pointer;
+}
+
+.delete-expense-button:hover {
+    background-color: #777;
+}
+
+#custom-category-input {
+    padding: 1vh;
+    border: 1px solid #555;
+    border-radius: 0.5vh;
+    background-color: #666;
+    color: #fff;
+}
+
+#category {
+    padding: 1vh;
+    border: 1px solid #555;
+    border-radius: 0.5vh;
+    background-color: #666;
+    color: #fff;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #444;
+    margin: 15% auto;
+    padding: 2vh;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 1vh;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#login-form label {
+    display: block;
+    margin-bottom: 1vh;
+}
+
+#login-form input {
+    width: 100%;
+    padding: 1vh;
+    margin-bottom: 2vh;
+    border: 1px solid #555;
+    border-radius: 0.5vh;
+    background-color: #666;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+#login-form button {
+    width: 100%;
+    padding: 1vh;
+    border: 1px solid #555;
+    border-radius: 0.5vh;
+    background-color: #666;
+    color: #fff;
+    cursor: pointer;
+}
+
+#login-form button:hover {
+    background-color: #777;
+}
+
+#register-form label {
+    display: block;
+    margin-bottom: 1vh;
+}
+
+#register-form input {
+    width: 100%;
+    padding: 1vh;
+    margin-bottom: 2vh;
+    border: 1px solid #555;
+    border-radius: 0.5vh;
+    background-color: #666;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+#register-form button {
+    width: 100%;
+    padding: 1vh;
+    border: 1px solid #555;
+    border-radius: 0.5vh;
+    background-color: #666;
+    color: #fff;
+    cursor: pointer;
+}
+
+#register-form button:hover {
+    background-color: #777;
+}

@@ -1,0 +1,43 @@
+<div class="recent-expenses">
+    <h2>Expenses</h2>
+    <form id="expense-form" class="expense-form">
+        <input list="categories" id="category" name="category" placeholder="Select or type a category" required>
+        <datalist id="categories">
+            <!-- Options will be populated dynamically -->
+        </datalist>
+        <input type="text" id="location" placeholder="Location" required>
+        <input type="text" id="description" placeholder="Description" required>
+        <input type="number" id="amount" placeholder="Amount" step="0.01" required>
+        <input type="date" id="date" required>
+        <button type="submit">Add Expense</button>
+    </form>
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Location</th>
+                    <th>Description</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="expenses-list">
+                <!-- JavaScript will populate this -->
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="monthly-report">
+    <h2>Monthly Report</h2>
+    <div id="income-expense-difference" class="amount-positive">Income vs. Expenses Difference: 0.00</div>
+    <div class="charts">
+        <div class="chart-container">
+            <canvas id="bar-chart"></canvas>
+        </div>
+        <div class="chart-container">
+            <canvas id="pie-chart"></canvas>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="sidebar">
+    <div class="profile-picture"></div>
+    <div class="nav">
+        <div class="nav-item nav-item-home">Home</div>
+        <% if (loggedIn) { %>
+            <div class="nav-item nav-item-logout">Logout</div>
+        <% } else { %>
+            <div class="nav-item nav-item-login">Login</div>
+            <div class="nav-item nav-item-register">Register</div>
+        <% } %>
+    </div>
+</div>
